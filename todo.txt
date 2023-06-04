@@ -1,0 +1,16 @@
+Terminar los estilos DONE
+
+Encontrar una forma de crear extractos del contenido automáticamente DONE
+
+Optimizar los estilos <--- IZI DO IT
+
+Formatear el PHP DONE?
+
+Comentar el PHP
+
+Terminar la navbar y las sidebars DONE-ISH
+
+Escribir artículos DONE
+
+Pushear a GitHub <--- APRENDÉ GIT PUTAZO
+
