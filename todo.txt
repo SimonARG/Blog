@@ -2,4 +2,4 @@ Make responsive (media queries, decent CSS)
 
 Fix a couple of UI memes
 
-Finish writing videogame article
+Translate and make language switcher
