@@ -19,15 +19,15 @@ $converter = new GithubFlavoredMarkdownConverter([
     <div class="edit-post">
 
         <h1 class="listed-post-title">Editar Post</h1>
-        <form class="upload-form" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+        <form class="upload-form fill-width flex-c f-just-cent f-al-cent" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
             <input type="hidden" name="id" value="<?php echo $post['id'] ?>">
-            <input class="wide" type="text" name="title" value="<?php echo $post['title'] ?>">
-            <input class="wide" type="text" name="subtitle" value="<?php echo $post['subtitle'] ?>">
-            <textarea class="wide" name="content"><?php echo $post['content'] ?></textarea>
+            <input class="fill-width fillable" type="text" name="title" value="<?php echo $post['title'] ?>">
+            <input class="fill-width fillable" type="text" name="subtitle" value="<?php echo $post['subtitle'] ?>">
+            <textarea class="fill-width fillable" name="content"><?php echo $post['content'] ?></textarea>
             <input type="file" name="thumb">
             <input type="hidden" name="saved-thumb" value="<?php echo $post['thumb'] ?>">
 
-            <input type="submit" value="Modificar Post">
+            <input class="btn" type="submit" value="Modificar Post">
         </form>
 
     </div>

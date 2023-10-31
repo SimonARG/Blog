@@ -14,16 +14,14 @@ $converter = new GithubFlavoredMarkdownConverter([
 
 ?>
 
-<div id="content" class="content">
+<div class="content">
 
-    <div class="single-post">
-
+    <div class="single-post flex-c f-just-cent">
         <p class="listed-post-date"><?php echo post_date($post['date']); ?></p>
         <h1 class="listed-post-title"><?php echo $post['title'] ?></h1>
         <h2 class="listed-post-subtitle"><?php echo $post['subtitle'] ?></h2>
         <img class="single-post-thumb" src="<?php echo URL ?>/images/<?php echo $post['thumb'] ?>" alt="<?php echo $post['title'] ?>">
-        <div class="single-content"><?php echo $converter->convert($post['content']) ?></div>
-
+        <div class="single-content fill-width"><?php echo $converter->convert($post['content']) ?></div>
     </div>
 
 </div>

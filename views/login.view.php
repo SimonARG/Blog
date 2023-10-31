@@ -6,19 +6,16 @@ require 'left-sidebar.view.php';
 
 ?>
 
-<div id="content" class="content">
-
+<div class="content">
     <div class="login">
-
         <h1 class="login-title">Iniciar Sesión</h1>
-        <form class="login-form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
-            <input type="text" name="user" placeholder="Usuario">
-            <input type="password" name="password" placeholder="Contraseña">
-            <input type="submit" value="Iniciar Sesión">
+
+        <form class="login-form flex-c f-al-cent f-just-cent" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>">
+            <input type="text" class="fillable" name="user" placeholder="Usuario">
+            <input type="password" class="fillable" name="password" placeholder="Contraseña">
+            <input class="btn" type="submit" value="Iniciar Sesión">
         </form>
-
     </div>
-
 </div>
 
 <?php

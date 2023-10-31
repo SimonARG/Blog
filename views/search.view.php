@@ -31,8 +31,7 @@ $converter = new GithubFlavoredMarkdownConverter([
                 <h2 class="listed-post-subtitle"><?php echo $post['subtitle'] ?></h2>
                 <img class="listed-post-thumb" src="<?php echo URL ?>/images/<?php echo $post['thumb'] ?>" alt="<?php echo $post['title'] ?>">
             </a>
-            <div class="listed-post-extract"><?php echo mb_strimwidth($converter->convert($post['content']), 0, 400, "...") ?></div>
-            <a href="single.php?id=<?php echo $post['id'] ?>"
+            <div class="listed-post-extract"><?php echo mb_strimwidth($converter->convert($post['content']), 0, 240, "...") ?></div>
             <a href="single.php?id=<?php echo $post['id'] ?>" class="continue">Continuar leyendo...</a>
             <hr class="post-separator">
 

@@ -273,16 +273,18 @@ body::-webkit-scrollbar-thumb:hover {
 .fillable {
     outline: none;
     padding: .4rem .6rem;
-    background-color: var(--trans-background);
+    background-color: transparent;
+    border: var(--border);
+    color: var(--text-main);
 }
 
 .fillable:-webkit-autofill {
     outline: none !important;
     padding: .4rem .6rem !important;
     background-color: var(--trans-background) !important;
-    border: 1px solid white !important;
+    border: var(--border) !important;
     -webkit-background-clip: text !important;
-    -webkit-text-fill-color: white !important;
+    -webkit-text-fill-color: var(--text-main) !important;
     transition: background-color 5000s ease-in-out 0s !important;
 }
 
@@ -300,6 +302,11 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: transparent;
     border: var(--border);
     color: var(--text-main);
+}
+
+.btn:hover {
+    color: white;
+    background-color: var(--background-hover);
 }
 
 /*
@@ -322,6 +329,7 @@ body {
     margin-right: auto;
     display: flex;
     background-color: var(--trans-background);
+    min-height: 100svh;
 }
 
 /*
@@ -334,6 +342,7 @@ header {
     background-color: var(--trans-background);
     height: 12rem;
     border: var(--border);
+    border-top: none;
     width: 90vw;
     margin-left: auto;
     margin-right: auto;
@@ -341,7 +350,7 @@ header {
     flex-direction: column;
 }
 
-.logo{
+.logo {
     margin-left: auto;
     margin-right: auto;
     height: 70%;
@@ -385,6 +394,22 @@ nav {
 
 /*
 |------------------------------------------------------------
+| Footer
+|------------------------------------------------------------
+*/
+
+footer {
+    width: 90vw;
+    background-color: var(--trans-background);
+    height: 5rem;
+    border: var(--border);
+    border-bottom: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+|------------------------------------------------------------
 | Sidebars
 |------------------------------------------------------------
 */
@@ -402,58 +427,30 @@ nav {
 */
 
 .sd-right {
-    padding: .7rem;
+    padding: 2rem .7rem 0 .7rem;
 }
 
-.searchbar {
-    width: 10.5vw;
-    padding: .21rem;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid white;
-    color: white;
-    font-size: .9rem;
-    float: left;
-    margin-bottom: max(2vw, 15px);
+.search-form {
+    height: 2.2rem;
 }
 
-.searchbar:hover {
+.search-bar {
+    width: calc(100% - 2.2rem);
+}
+
+.search-bar:hover {
     background-color: var(--background-hover);
 }
 
-.searchbar:focus {
+.search-bar:focus {
     background-color: var(--background-hover);
 }
 
-.search button {
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid white;
+.search-btn {
     border-left: none;
-    font-size: .9rem;
-    padding: .26rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    float: left;
-}
-
-.search button:hover {
-    background-color: var(--background-hover);
-}
-
-form.search::after {
-
-    content: "";
-    clear: both;
-    display: table;
-
-}
-
-.archive-container {
-
-    width: 100%;
-    padding: .6rem;
-
+    width: 2.2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 /*
@@ -483,309 +480,219 @@ form.search::after {
 
 /*
 |------------------------------------------------------------
-| ???
+| Content
 |------------------------------------------------------------
 */
 
 
 .results {
-
     margin-bottom: max(.3vw, 4px);
     font-size: 1.1rem;
     color: var(--text-lesser);
-
 }
 
 .content {
-
     width: 60vw;
-    
 }
 
-.content p a {
-
-    color: white;
-    text-decoration: underline;
-
-}
-
-.footer-container {
-
-    background-color: var(--trans-background);
-    height: 60px;
-    border: 1px solid white;
-
-}
-
-.listed-post, .login, .admin-post, .edit-post, .new-post, .search-title {
-
+.listed-post,
+.login,
+.admin-post,
+.edit-post,
+.new-post,
+.search-title {
     height: auto;
-    margin: 1vw;
-    padding-top: .5vw;
+    margin: .9rem;
+    padding-top: .4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-}
-
-.upload-form {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-
-}
-
-.upload-form input, .upload-form textarea {
-
-    margin-bottom: 1vw;
-    padding: .4rem;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid white;
-    color: white;
-    outline: none;
-    resize: none;
-    height: auto;
-    
-
-}
-
-.upload-form textarea {
-
-    height: 40vh;
-    font-size: .9rem;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.upload-form input:focus, .upload-form textarea:focus,
-.upload-form input:hover, .upload-form textarea:hover {
-
-    background-color: var(--background-hover);
-
-}
-
-.upload-form .wide {
-
-    width: 100%;
-
 }
 
 .listed-post:hover {
-
     background-color: var(--background-hover);
-
-}
-
-.admin-buttons {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: max(.6vw, 5px);
-    margin-bottom: 1vw;
-
-}
-
-.admin-function {
-
-    border: 1px solid white;
     color: white;
-    padding: .4rem;
-    width: 5rem;
-    text-align: center;
-
 }
 
-.admin-function:hover {
-
-    background-color: var(--background-hover);
-
-}
-
-.single-post {
-
-    height: auto;
-    margin: 1vw;
-    padding-top: .5vw;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
+.listed-post:hover * {
+    color: white;
 }
 
 .listed-post-link:hover {
-
     text-decoration: underline;
-    text-decoration-color: white;
-
-}
-
-.listed-post-link:hover .listed-post-date{
-
-    text-decoration: none;
-
 }
 
 .listed-post-date {
-
     font-size: .88rem;
-    color: rgba(255, 255, 255, 0.591);
     margin-bottom: .2rem;
     text-align: center;
-    
 }
 
-.listed-post-title, .login-title, .admin-post-title {
-
+.listed-post-title,
+.login-title,
+.admin-post-title {
     font-size: 1.7rem;
     font-weight: bold;
-    color: white;
     margin-bottom: .6rem;
     text-align: center;
-
 }
 
 .listed-post-subtitle {
-
     font-size: 1.1rem;
-    color: white;
     margin-bottom: .5rem;
     text-align: center;
-    
 }
 
 .listed-post-thumb {
-
     height: max(25vw, 100px);
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: .75rem;
-
-}
-
-.single-post-thumb {
-
-    height: max(25vw, 100px);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.2rem;
-
 }
 
 .listed-post-extract {
-
-    font-size: 1rem;
-    color: white;
     text-align: center;
     margin-bottom: .75rem;
-
 }
 
-.login form {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.continue {
+    color: var(--text-lesser);
     text-align: center;
-    flex-direction: column;
+    margin-bottom: .75rem;
+}
 
+.continue:hover {
+    text-decoration: underline;
+}
+
+.post-separator {
+    color: var(--text-mains);
+    width: 100%;
+}
+
+/*
+|------------------------------------------------------------
+| Upload
+|------------------------------------------------------------
+*/
+
+.upload-form input,
+.upload-form textarea {
+    margin-bottom: 1rem;
+    padding: .4rem;
+}
+
+.upload-form textarea {
+    height: 22rem;
+    font-size: .9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: vertical;
+}
+
+.upload-form .btn {
+    font-size: 1.1rem;
+    padding: 1rem;
+    width: 10rem;
+}
+
+/*
+|------------------------------------------------------------
+| Admin panel
+|------------------------------------------------------------
+*/
+
+.admin-btns {
+    column-gap: .85rem;
+    margin-bottom: 1rem;
+}
+
+.admin-function {
+    padding: .4rem;
+    width: 5rem;
+    text-align: center;
+}
+
+.new-btn,
+.logout-btn {
+    padding: .5rem .6rem;
+    width: 8rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/*
+|------------------------------------------------------------
+| Login
+|------------------------------------------------------------
+*/
+
+.login-form {
+    text-align: center;
 }
 
 .login-form input[type="text"],
 .login-form input[type="password"] {
-
-    border: 1px solid white;
-    padding: 10px;
-    margin: 0 max(3vw, 10px) max(1.8vw, 10px) max(3vw, 10px);
-    width: max(30vw, 40px);
+    margin-bottom: 2rem;
+    width: 24rem;
     font-size: 1rem;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-
+    padding: .7rem 1.1rem;
 }
 
-.login-form input:hover {
-
-    background-color: var(--background-hover);
-
-}
-
+.login-form input:hover,
 .login-form input:focus {
-
     background-color: var(--background-hover);
-    
 }
 
 .login-form input[type="submit"] {
-
-    border: 2px solid white;
-    padding: 6px;
-    width: max(20vw, 40px);
-    margin-bottom: max(1.8vw, 10px);
+    padding: .9rem 1.1rem;
+    width: 24rem;
+    margin-bottom: 1.3rem;
     font-size: 1.4rem;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
     cursor: pointer;
-
 }
 
-.login-form input[type="submit"]:hover {
-
-    background-color: var(--background-hover);
-
-}
+/*
+|------------------------------------------------------------
+| Single
+|------------------------------------------------------------
+*/
 
 .single-content {
-
     font-size: 1rem;
-    color: white;
     text-align: left;
     margin-bottom: .75rem;
-    width: 100%;
-
 }
 
-.continue {
-
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.73);
-    text-align: center;
-    margin-bottom: .75rem;
-
+.single-post {
+    margin: .9rem;
+    padding-top: .4rem;
 }
 
-.continue:hover {
-
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.73);
-
+.single-post-thumb {
+    height: max(25vw, 100px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2rem;
 }
 
-.post-separator {
-
-    color: white;
-    width: 100%;
-
-}
+/*
+|------------------------------------------------------------
+| Paginacion
+|------------------------------------------------------------
+*/
 
 .paginacion {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1vw;
+    margin-bottom: 1rem;
     user-select: none;
-
 }
 
 .paginacion ul {
-    border: 1px solid white;
+    border: var(--border);
     border-right: none;
     display: flex;
     justify-content: center;
@@ -794,70 +701,21 @@ form.search::after {
 }
 
 .paginacion li {
-
-    background-color: rgba(0, 0, 0, 0);
     font-size: 1.4rem;
     padding: 3px 7px;
     cursor: pointer;
-    color: white;
-    border-right: 1px solid white;
-
-}
-
-.paginacion a {
-
-    color: white;
-
+    border-right: var(--border);
 }
 
 .paginacion li:hover{
-
     background-color: var(--background-hover);
-
 }
 
 .paginacion ul .active {
-
-    box-shadow: 0px 2px 4px white, 0px -2px 4px white;
     background-color: var(--background-hover);
-
+    color: white;
 }
 
 .paginacion ul .disabled {
-
     cursor: not-allowed;
-
-}
-
-.admin-btns {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1vw;
-
-}
-
-.new-btn, .logout-btn {
-
-    border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0);
-    color: white;
-    padding: max(.38vw, 3px);
-    width: 9vw;
-    font-size: 1rem;
-    text-align: center;
-
-}
-
-.new-btn:hover, .logout-btn:hover {
-
-    background-color: var(--background-hover);
-
-}
-
-.new-btn {
-
-    margin-right: 1vw;
-
 }
