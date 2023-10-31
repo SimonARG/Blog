@@ -1,5 +1,0 @@
-Make responsive (media queries, decent CSS)
-
-Fix a couple of UI memes
-
-Translate and make language switcher

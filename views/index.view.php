@@ -14,7 +14,7 @@ $converter = new GithubFlavoredMarkdownConverter([
 
 ?>
 
-<div id="content" class="content">
+<div class="content">
 
     <?php foreach($posts as $post): ?>
 

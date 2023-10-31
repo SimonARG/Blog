@@ -1,19 +1,27 @@
+<header>
+    <span class="logo flex-r f-al-cent f-just-cent"><a href="<?php echo URL ?>">MUERTE TÉRMICA</a></span>
+
+    <nav>
+        <ul class="topnav fill-height flex-r">
+            <li class="topnav-item flex-r">
+                <a class="fill-height fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>">Inicio</a>
+            </li>
+            <li class="topnav-item flex-r">
+                <a class="fill-height fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>">Contacto</a>
+            </li>
+            <li class="topnav-item flex-r">
+                <a class="fill-height fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>">Otros Blogs</a>
+            </li>
+            <li class="topnav-item flex-r">
+                <a class="fill-height fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>">Info</a>
+            </li>
+            <li class="topnav-item flex-r">
+                <a class="fill-height fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>">Links</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 <body>
 
-<div id="body-container" class="body-container">
-
-    <header id="header-container" class="header-container">
-        <a href="<?php echo URL ?>">
-            <h1 class="logo">MUERTE TÉRMICA</h1>
-        </a>
-    </header>
-
-    <div id="navbar-container" class="navbar-container">
-
-        <a class="nav-btn btn-hover" href="<?php echo URL ?>">Inicio</a>
-        <a class="nav-btn btn-hover" href="<?php echo URL ?>">Contacto</a>
-        <a class="nav-btn btn-hover" href="<?php echo URL ?>">Otros Blogs</a>
-        <a class="nav-btn btn-hover" href="<?php echo URL ?>">Info</a>
-        <a class="nav-btn btn-hover" href="<?php echo URL ?>">Links</a>
-
-    </div>
+<div class="body-container">

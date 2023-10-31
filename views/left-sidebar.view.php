@@ -1,15 +1,9 @@
-<div id="left-sidebar" class="sidebar sd-left">
+<div class="sidebar sd-left flex-c f-al-cent">
+    <a class="sb-links fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>/login.php">Iniciar Sesión</a>
 
-    <div class="sidebar-container">
+    <a class="sb-links fill-width flex-r f-al-cent f-just-cent" href="<?php echo URL ?>/admin/">Panel de Control</a>
 
-        <a class="left-sb-btn btn-hover" href="<?php echo URL ?>/login.php">Iniciar Sesión</a>
+    <a class="sb-links fill-width flex-r f-al-cent f-just-cent" href="http://localhost/Blog/index.php?p=2/admin/">Sobre Mi</a>
 
-        <a class="left-sb-btn btn-hover" href="<?php echo URL ?>/admin/">Panel de Control</a>
-
-        <a class="left-sb-btn btn-hover" href="http://localhost/Blog/index.php?p=2/admin/">Sobre Mi</a>
-
-        <a class="left-sb-btn btn-hover" href="http://localhost/Blog/single.php?id=21/admin/">Sobre Este Blog</a>
-
-    </div>
-
+    <a class="sb-links fill-width flex-r f-al-cent f-just-cent" href="http://localhost/Blog/single.php?id=21/admin/">Sobre Este Blog</a>
 </div>
